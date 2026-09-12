@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Keshav Porwal — Student Researcher | ADAPTIVE Parallel Architecture | AI Builder India</title>
+
+  <meta name="description"
+    content="ADAPTIVE — A Specialized Parallel Architecture for Resource-Constrained Pattern Recognition. 4 cycles vs 8 cycles, 40ns vs 80ns @100MHz sim, 50% latency reduction, 2x improvement. 100/100 RTL verified by Class 10 researcher Keshav Porwal.">
+
+  <meta name="keywords"
+    content="Keshav Porwal, ADAPTIVE architecture, parallel architecture, Hamming distance, RTL verification, SystemVerilog, student researcher India">
+
+  <meta name="author" content="Keshav Porwal">
+
+  <link rel="canonical" href="https://keshavporwal73-ux.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"
+    content="Keshav Porwal — Student Researcher | ADAPTIVE Parallel Architecture">
+
+  <meta property="og:description"
+    content="Student researcher, author, software developer and AI builder. Creator of ADAPTIVE and multiple independent research and software projects.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://keshavporwal73-ux.github.io/">
+
+  <!-- Add adaptive_poster.jpg to the repository if you want the OG image -->
+  <meta property="og:image"
+    content="https://keshavporwal73-ux.github.io/adaptive_poster.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title"
+    content="Keshav Porwal — Student Researcher | ADAPTIVE">
+  <meta name="twitter:description"
+    content="ADAPTIVE parallel architecture, scientific research, AI systems and independent software development.">
+  <meta name="twitter:image"
+    content="https://keshavporwal73-ux.github.io/adaptive_poster.jpg">
+
+  <style>
+    :root {
+      --bg: #0a1020;
+      --bg2: #0d1528;
+      --card: #101a30;
+      --card2: #0c1426;
+      --text: #f4f8ff;
+      --muted: #9eacc4;
+      --line: rgba(255,255,255,.09);
+      --blue: #00d4ff;
+      --blue2: #63e7ff;
+      --green: #55e6a5;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
+        var(--bg);
+      background-size: 40px 40px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--blue2);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(10,16,32,.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: .04em;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: .9rem;
+    }
+
+    .hero {
+      padding: 110px 0 90px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      border: 1px solid rgba(0,212,255,.35);
+      background: rgba(0,212,255,.06);
+      color: var(--blue2);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: .95;
+      letter-spacing: -.055em;
+      margin-bottom: 24px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.3rem, 3vw, 2.2rem);
+      color: var(--blue2);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .lead {
+      max-width: 850px;
+      font-size: 1.12rem;
+      color: var(--muted);
+    }
+
+    .identity {
+      margin-top: 25px;
+      color: #d9e5f7;
+      font-weight: 600;
+    }
+
+    .links {
+      margin-top: 24px;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    section {
+      padding: 85px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-size: .75rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h2.section-title {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      letter-spacing: -.035em;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(16,26,48,.96), rgba(12,20,38,.96));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+      margin-top: 22px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .architecture {
+      overflow-x: auto;
+      margin: 35px 0;
+    }
+
+    .architecture svg {
+      display: block;
+      width: 100%;
+      min-width: 760px;
+      height: auto;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 28px 0;
+    }
+
+    .metric {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.025);
+      border-radius: 14px;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--blue2);
+      font-size: 1.7rem;
+      line-height: 1.2;
+      margin-bottom: 7px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+      min-width: 650px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      padding: 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+    }
+
+    th {
+      color: var(--blue2);
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    td {
+      color: #d5dfef;
+    }
+
+    .evidence {
+      border-left: 3px solid var(--blue);
+      padding: 20px 22px;
+      margin-top: 25px;
+      background: rgba(0,212,255,.04);
+      color: #c9d6e9;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .project {
+      min-height: 220px;
+    }
+
+    .project .tag {
+      display: inline-block;
+      margin-bottom: 13px;
+      color: var(--blue);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 800;
+    }
+
+    .project p {
+      margin-bottom: 15px;
+    }
+
+    .project a {
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .research-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .research-item {
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.02);
+    }
+
+    .research-item strong {
+      color: white;
+    }
+
+    footer {
+      padding: 45px 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        align-items: flex-start;
+        padding: 15px 0;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 75px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 21px;
+      }
+    }
+  </style>
+
+  <!-- Structured data: ONE Keshav Porwal identity -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://keshavporwal73-ux.github.io/#person",
+        "name": "Keshav Porwal",
+        "url": "https://keshavporwal73-ux.github.io/",
+        "jobTitle": "Student Researcher, Author, Software Developer, AI Builder and Science Communicator",
+        "sameAs": [
+          "https://github.com/keshavporwal73-ux/",
+          "https://keshavporwal.wordpress.com/"
+        ],
+        "knowsAbout": [
+          "Scientific Research",
+          "Artificial Intelligence",
+          "Software Development",
+          "SystemVerilog",
+          "RTL Verification",
+          "Astronomy",
+          "History",
+          "Science Communication",
+          "Writing"
+        ]
+      },
+
+      {
+        "@type": "ResearchProject",
+        "@id": "https://keshavporwal73-ux.github.io/#adaptive",
+        "name": "ADAPTIVE",
+        "alternateName": "A Specialized Parallel Architecture for Resource-Constrained Pattern Recognition",
+        "description": "Designed and experimentally verified a specialized digital architecture investigating whether parallel pattern evaluation can reduce computational latency compared with sequential pattern evaluation under controlled resource constraints.",
+        "creator": {
+          "@id": "https://keshavporwal73-ux.github.io/#person"
+        }
+      },
+
+      {
+        "@type": "SoftwareApplication",
+        "name": "AETHEL Cognitive Labs",
+        "applicationCategory": "Artificial Intelligence",
+        "creator": {
+          "@id": "https://keshavporwal73-ux.github.io/#person"
+        }
+      },
+
+      {
+        "@type": "SoftwareApplication",
+        "name": "ORIGIN",
+        "applicationCategory": "Artificial Intelligence",
+        "url": "https://origin-bcqi.vercel.app/",
+        "creator": {
+          "@id": "https://keshavporwal73-ux.github.io/#person"
+        }
+      },
+
+      {
+        "@type": "SoftwareApplication",
+        "name": "ASTRO",
+        "applicationCategory": "Astronomy Software",
+        "url": "https://astro-spatial-x.vercel.app/",
+        "creator": {
+          "@id": "https://keshavporwal73-ux.github.io/#person"
+        }
+      },
+
+      {
+        "@type": "SoftwareApplication",
+        "name": "CHRONOS",
+        "applicationCategory": "Historical Intelligence Software",
+        "url": "https://chronos-historical-intelligence-i33.vercel.app/",
+        "creator": {
+          "@id": "https://keshavporwal73-ux.github.io/#person"
+        }
+      },
+
+      {
+        "@type": "SoftwareApplication",
+        "name": "TEXTILE OS AI",
+        "applicationCategory": "Business Software",
+        "url": "https://retail-textile-management.vercel.app/",
+        "creator": {
+          "@id": "https://keshavporwal73-ux.github.io/#person"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">KESHAV PORWAL</div>
+
+      <div class="nav-links">
+        <a href="#adaptive">ADAPTIVE</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+
+      <div class="eyebrow">
+        VERIFIED RTL • 100/100 TESTS • 50% LATENCY REDUCTION
+      </div>
+
+      <h1>Keshav Porwal</h1>
+
+      <h2>
+        Student Researcher • Author • Software Developer • AI Builder •
+        Science Communicator • Student Leader
+      </h2>
+
+      <p class="lead">
+        Class 10 student researcher from India working independently across
+        scientific research, artificial intelligence, software engineering,
+        astronomy, history, writing, publishing and science communication.
+      </p>
+
+      <p class="identity">
+        Creator of 17 ebooks, independent research projects, and multiple
+        AI/software systems.
+      </p>
+
+      <div class="links">
+        <a href="https://github.com/keshavporwal73-ux/" target="_blank"
+          rel="noopener">GitHub →</a>
+
+        <a href="https://keshavporwal.wordpress.com/" target="_blank"
+          rel="noopener">Author Platform →</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ADAPTIVE -->
+
+    <section id="adaptive">
+      <div class="container">
+
+        <div class="section-label">Primary Research Project</div>
+
+        <h2 class="section-title">ADAPTIVE</h2>
+
+        <div class="card">
+
+          <h3>
+            ADAPTIVE — A Specialized Parallel Architecture for
+            Resource-Constrained Pattern Recognition
+          </h3>
+
+          <p>
+            Designed and experimentally verified a specialized digital
+            architecture investigating whether parallel pattern evaluation
+            can reduce computational latency compared with sequential pattern
+            evaluation under controlled resource constraints.
+          </p>
+
+          <div class="architecture">
+
+            <svg viewBox="0 0 1000 350"
+              role="img"
+              aria-labelledby="adaptive-title adaptive-desc">
+
+              <title id="adaptive-title">
+                ADAPTIVE parallel architecture
+              </title>
+
+              <desc id="adaptive-desc">
+                Sixteen-bit input vectors are evaluated by eight parallel
+                Hamming-distance units followed by a reduction tree from
+                eight to four to two to one and a best-match output.
+              </desc>
+
+              <!-- Input -->
+
+              <rect x="25" y="125" width="125" height="75"
+                rx="12"
+                fill="#101a30"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <text x="87" y="153"
+                fill="#f4f8ff"
+                text-anchor="middle"
+                font-size="15"
+                font-weight="700">
+                16-bit INPUT
+              </text>
+
+              <text x="87" y="178"
+                fill="#9eacc4"
+                text-anchor="middle"
+                font-size="12">
+                W = 16
+              </text>
+
+              <!-- Input arrow -->
+
+              <line x1="150" y1="162"
+                x2="190" y2="162"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <!-- Hamming units -->
+
+              <g fill="#101a30"
+                stroke="#00d4ff"
+                stroke-width="1.5">
+
+                <rect x="190" y="30" width="100" height="32" rx="7"/>
+                <rect x="190" y="70" width="100" height="32" rx="7"/>
+                <rect x="190" y="110" width="100" height="32" rx="7"/>
+                <rect x="190" y="150" width="100" height="32" rx="7"/>
+                <rect x="190" y="190" width="100" height="32" rx="7"/>
+                <rect x="190" y="230" width="100" height="32" rx="7"/>
+                <rect x="190" y="270" width="100" height="32" rx="7"/>
+                <rect x="190" y="310" width="100" height="32" rx="7"/>
+
+              </g>
+
+              <g fill="#f4f8ff"
+                text-anchor="middle"
+                font-size="11"
+                font-weight="700">
+
+                <text x="240" y="51">HAMMING 1</text>
+                <text x="240" y="91">HAMMING 2</text>
+                <text x="240" y="131">HAMMING 3</text>
+                <text x="240" y="171">HAMMING 4</text>
+                <text x="240" y="211">HAMMING 5</text>
+                <text x="240" y="251">HAMMING 6</text>
+                <text x="240" y="291">HAMMING 7</text>
+                <text x="240" y="331">HAMMING 8</text>
+
+              </g>
+
+              <!-- Reduction -->
+
+              <line x1="290" y1="46"
+                x2="365" y2="92"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="290" y1="86"
+                x2="365" y2="92"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="290" y1="126"
+                x2="365" y2="132"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="290" y1="166"
+                x2="365" y2="132"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="290" y1="206"
+                x2="365" y2="192"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="290" y1="246"
+                x2="365" y2="192"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="290" y1="286"
+                x2="365" y2="232"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="290" y1="326"
+                x2="365" y2="232"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <text x="385" y="55"
+                fill="#63e7ff"
+                font-size="12"
+                font-weight="700">
+                8 → 4
+              </text>
+
+              <text x="385" y="180"
+                fill="#63e7ff"
+                font-size="12"
+                font-weight="700">
+                4 → 2
+              </text>
+
+              <text x="385" y="255"
+                fill="#63e7ff"
+                font-size="12"
+                font-weight="700">
+                2 → 1
+              </text>
+
+              <!-- Reduction nodes -->
+
+              <circle cx="365" cy="92" r="18"
+                fill="#101a30"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <circle cx="365" cy="132" r="18"
+                fill="#101a30"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <circle cx="365" cy="192" r="18"
+                fill="#101a30"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <circle cx="365" cy="232" r="18"
+                fill="#101a30"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <!-- Second reduction -->
+
+              <line x1="383" y1="92"
+                x2="455" y2="112"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="383" y1="132"
+                x2="455" y2="112"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="383" y1="192"
+                x2="455" y2="212"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="383" y1="232"
+                x2="455" y2="212"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <circle cx="455" cy="112" r="20"
+                fill="#101a30"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <circle cx="455" cy="212" r="20"
+                fill="#101a30"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <!-- Final -->
+
+              <line x1="475" y1="112"
+                x2="545" y2="162"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <line x1="475" y1="212"
+                x2="545" y2="162"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <circle cx="545" cy="162" r="24"
+                fill="#101a30"
+                stroke="#63e7ff"
+                stroke-width="2.5"/>
+
+              <text x="545" y="166"
+                fill="#f4f8ff"
+                text-anchor="middle"
+                font-size="12"
+                font-weight="800">
+                MIN
+              </text>
+
+              <line x1="569" y1="162"
+                x2="630" y2="162"
+                stroke="#00d4ff"
+                stroke-width="2"/>
+
+              <rect x="630" y="125"
+                width="170"
+                height="75"
+                rx="12"
+                fill="#101a30"
+                stroke="#63e7ff"
+                stroke-width="2"/>
+
+              <text x="715" y="153"
+                fill="#f4f8ff"
+                text-anchor="m
