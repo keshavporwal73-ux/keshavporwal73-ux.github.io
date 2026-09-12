@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://keshavporwal73-ux.github.io/sitemap.xml
