@@ -1,1777 +1,987 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Keshav Porwal — Student Researcher | AI Builder | Author</title>
-
-  <meta
-    name="description"
-    content="Official portfolio of Keshav Porwal — Student Researcher, Author, Software Developer, AI Builder, Science Communicator, and Student Leader from India."
-  >
-
-  <meta
-    name="keywords"
-    content="Keshav Porwal, student researcher India, Keshav Porwal researcher, Keshav Porwal author, ADAPTIVE architecture, AI builder, software developer, science communicator"
-  >
-
-  <meta name="author" content="Keshav Porwal">
-
-  <meta property="og:title" content="Keshav Porwal — Student Researcher | Author | AI Builder">
-  <meta
-    property="og:description"
-    content="Official portfolio of Keshav Porwal — Student Researcher, Author, Software Developer, AI Builder, Science Communicator, and Student Leader."
-  >
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://keshavporwal73-ux.github.io/">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Keshav Porwal — Student Researcher | AI Builder">
-  <meta
-    name="twitter:description"
-    content="Student researcher, author, software developer, AI builder and science communicator from India."
-  >
-
-  <link rel="canonical" href="https://keshavporwal73-ux.github.io/">
-
-  <style>
-    :root {
-      --bg: #070b14;
-      --bg2: #0b1120;
-      --card: #101827;
-      --card2: #0d1524;
-
-      --text: #f4f8ff;
-      --muted: #9eacc4;
-
-      --line: rgba(255,255,255,.09);
-
-      --blue: #00d4ff;
-      --blue2: #63e7ff;
-      --green: #55e6a5;
-
-      --max: 1160px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
-      color: var(--text);
-      background:
-        radial-gradient(circle at 50% -10%, rgba(0,212,255,.12), transparent 35%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
-
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-
-      background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-
-      background-size: 50px 50px;
-
-      mask-image: linear-gradient(to bottom, black, transparent 80%);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(var(--max), calc(100% - 40px));
-      margin: auto;
-    }
-
-    /* NAV */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-
-      backdrop-filter: blur(18px);
-      background: rgba(7,11,20,.78);
-
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav-inner {
-      min-height: 70px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 20px;
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: .12em;
-      font-size: 14px;
-      white-space: nowrap;
-    }
-
-    .brand span {
-      color: var(--blue);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .nav-links a {
-      transition: .2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--blue2);
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 720px;
-
-      display: flex;
-      align-items: center;
-
-      padding: 110px 0 100px;
-    }
-
-    .hero-content {
-      max-width: 900px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-
-      padding: 7px 12px;
-
-      border: 1px solid rgba(0,212,255,.28);
-      border-radius: 999px;
-
-      color: var(--blue2);
-      background: rgba(0,212,255,.06);
-
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .12em;
-
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: clamp(54px, 9vw, 100px);
-      line-height: .95;
-
-      letter-spacing: -.055em;
-
-      margin-bottom: 25px;
-    }
-
-    .role {
-      font-size: clamp(17px, 2vw, 23px);
-      color: var(--blue2);
-      font-weight: 650;
-
-      margin-bottom: 25px;
-    }
-
-    .hero-description {
-      max-width: 850px;
-
-      color: var(--muted);
-
-      font-size: 18px;
-      line-height: 1.8;
-
-      margin-bottom: 16px;
-    }
-
-    .hero-identity {
-      color: #c7d1e4;
-      font-size: 15px;
-
-      max-width: 760px;
-
-      margin-bottom: 35px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 12px 18px;
-
-      border: 1px solid var(--line);
-      border-radius: 10px;
-
-      font-size: 13px;
-      font-weight: 750;
-
-      background: rgba(255,255,255,.025);
-
-      transition: .2s ease;
-    }
-
-    .button.primary {
-      background: var(--blue);
-      color: #031018;
-      border-color: var(--blue);
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      border-color: rgba(0,212,255,.5);
-    }
-
-    .button.primary:hover {
-      background: var(--blue2);
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 100px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-label {
-      color: var(--blue);
-      font-size: 11px;
-      font-weight: 850;
-      letter-spacing: .16em;
-
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1;
-
-      letter-spacing: -.045em;
-
-      margin-bottom: 20px;
-    }
-
-    .section-intro {
-      max-width: 780px;
-      color: var(--muted);
-      font-size: 16px;
-      margin-bottom: 45px;
-    }
-
-    /* ADAPTIVE */
-
-    .adaptive-card {
-      background:
-        linear-gradient(145deg, rgba(0,212,255,.045), transparent 45%),
-        var(--card);
-
-      border: 1px solid rgba(0,212,255,.18);
-      border-radius: 20px;
-
-      padding: clamp(22px, 4vw, 45px);
-
-      box-shadow:
-        0 30px 100px rgba(0,0,0,.28);
-    }
-
-    .adaptive-heading {
-      font-size: clamp(24px, 4vw, 38px);
-      line-height: 1.15;
-
-      letter-spacing: -.035em;
-
-      margin-bottom: 18px;
-    }
-
-    .adaptive-description {
-      max-width: 900px;
-
-      color: var(--muted);
-      font-size: 16px;
-
-      margin-bottom: 40px;
-    }
-
-    .architecture {
-      width: 100%;
-      overflow-x: auto;
-
-      padding: 15px 0 25px;
-    }
-
-    .architecture svg {
-      display: block;
-      width: 100%;
-      min-width: 780px;
-      height: auto;
-    }
-
-    .metrics {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
-      gap: 12px;
-
-      margin: 20px 0 35px;
-    }
-
-    .metric {
-      background: var(--card2);
-
-      border: 1px solid var(--line);
-      border-radius: 14px;
-
-      padding: 22px;
-    }
-
-    .metric-number {
-      font-size: 31px;
-      font-weight: 850;
-      letter-spacing: -.04em;
-
-      color: var(--blue2);
-
-      margin-bottom: 5px;
-    }
-
-    .metric-label {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .comparison {
-      overflow-x: auto;
-      margin: 30px 0;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-
-      min-width: 650px;
-
-      font-size: 14px;
-    }
-
-    th,
-    td {
-      text-align: left;
-
-      padding: 15px;
-
-      border-bottom: 1px solid var(--line);
-    }
-
-    th {
-      color: var(--blue2);
-      font-size: 12px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    td {
-      color: #cbd5e7;
-    }
-
-    .evidence {
-      padding: 20px;
-
-      border-left: 3px solid var(--green);
-
-      background: rgba(85,230,165,.045);
-
-      color: #b9c8d9;
-
-      font-size: 13px;
-
-      margin-top: 30px;
-    }
-
-    .research-contribution {
-      margin-top: 30px;
-
-      padding: 24px;
-
-      border: 1px solid var(--line);
-      border-radius: 14px;
-
-      background: rgba(255,255,255,.02);
-    }
-
-    .research-contribution strong {
-      display: block;
-
-      color: var(--blue2);
-
-      font-size: 12px;
-      letter-spacing: .1em;
-
-      margin-bottom: 8px;
-    }
-
-    .status {
-      margin-top: 22px;
-
-      color: var(--green);
-
-      font-size: 13px;
-      font-weight: 750;
-    }
-
-    /* RESEARCH */
-
-    .research-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-      gap: 16px;
-    }
-
-    .research-item {
-      padding: 28px;
-
-      border: 1px solid var(--line);
-      border-radius: 16px;
-
-      background: rgba(255,255,255,.018);
-
-      transition: .2s ease;
-    }
-
-    .research-item:hover {
-      transform: translateY(-3px);
-      border-color: rgba(0,212,255,.25);
-    }
-
-    .research-number {
-      color: var(--blue);
-
-      font-size: 11px;
-      font-weight: 850;
-      letter-spacing: .15em;
-
-      margin-bottom: 12px;
-    }
-
-    .research-item h3 {
-      font-size: 21px;
-      margin-bottom: 8px;
-    }
-
-    .research-item p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* PROJECTS */
-
-    .projects {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-      gap: 16px;
-    }
-
-    .project {
-      position: relative;
-
-      padding: 28px;
-
-      background:
-        linear-gradient(145deg, rgba(255,255,255,.025), transparent),
-        var(--card);
-
-      border: 1px solid var(--line);
-      border-radius: 17px;
-
-      min-height: 230px;
-
-      transition: .25s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-4px);
-      border-color: rgba(0,212,255,.3);
-    }
-
-    .project-number {
-      color: var(--blue);
-
-      font-size: 11px;
-      font-weight: 850;
-
-      letter-spacing: .12em;
-
-      margin-bottom: 12px;
-    }
-
-    .project h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .project p {
-      color: var(--muted);
-      font-size: 14px;
-
-      margin-bottom: 22px;
-    }
-
-    .project-link {
-      color: var(--blue2);
-
-      font-size: 12px;
-      font-weight: 750;
-    }
-
-    /* WRITING */
-
-    .writing-box {
-      display: grid;
-
-      grid-template-columns:
-        1fr auto;
-
-      align-items: center;
-
-      gap: 30px;
-
-      padding: 35px;
-
-      border: 1px solid var(--line);
-      border-radius: 18px;
-
-      background:
-        radial-gradient(circle at 90% 20%, rgba(0,212,255,.08), transparent 35%),
-        var(--card);
-    }
-
-    .writing-box h3 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .writing-box p {
-      color: var(--muted);
-      max-width: 700px;
-    }
-
-    .book-count {
-      font-size: 52px;
-      font-weight: 900;
-      color: var(--blue2);
-
-      white-space: nowrap;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid var(--line);
-
-      padding: 45px 0 55px;
-
-      color: var(--muted);
-    }
-
-    .footer-inner {
-      display: flex;
-
-      justify-content: space-between;
-      align-items: center;
-
-      gap: 20px;
-    }
-
-    .footer-name {
-      color: var(--text);
-
-      font-weight: 800;
-      letter-spacing: .05em;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-
-      font-size: 12px;
-    }
-
-    .footer-links a:hover {
-      color: var(--blue2);
-    }
-
-    .copyright {
-      margin-top: 20px;
-
-      font-size: 11px;
-      color: #68758c;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 800px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 90px 0 80px;
-      }
-
-      section {
-        padding: 75px 0;
-      }
-
-      .metrics {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
-      }
-
-      .research-grid,
-      .projects {
-        grid-template-columns: 1fr;
-      }
-
-      .writing-box {
-        grid-template-columns: 1fr;
-      }
-
-      .book-count {
-        font-size: 42px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 500px) {
-
-      .container {
-        width: min(var(--max), calc(100% - 28px));
-      }
-
-      h1 {
-        font-size: 55px;
-      }
-
-      .role {
-        font-size: 16px;
-      }
-
-      .hero-description {
-        font-size: 16px;
-      }
-
-      .metrics {
-        grid-template-columns: 1fr;
-      }
-
-      .adaptive-card {
-        padding: 20px;
-      }
-    }
-  </style>
-
-  <!-- PERSON / WEBSITE STRUCTURED DATA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Keshav Porwal",
-    "url": "https://keshavporwal73-ux.github.io/",
-    "sameAs": [
-      "https://github.com/keshavporwal73-ux/",
-      "https://keshavporwal.wordpress.com/",
-      "https://curiofeedblog.wordpress.com/"
-    ],
-    "jobTitle": "Student Researcher, Author, Software Developer, AI Builder and Science Communicator",
-    "description": "Keshav Porwal is a student researcher, author, software developer, AI builder and science communicator from India."
-  }
-  </script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Keshav Porwal — Student Researcher, Author & AI Builder</title>
+<meta name="description" content="Official portfolio of Keshav Porwal — Student Researcher, Author, Software Developer, AI Builder, Science Communicator and Student Leader from India.">
+<meta name="author" content="Keshav Porwal">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://keshavporwal73-ux.github.io/">
+
+<meta property="og:title" content="Keshav Porwal — Student Researcher & AI Builder">
+<meta property="og:description" content="Research, AI systems, software projects, writing and independent work by Keshav Porwal.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://keshavporwal73-ux.github.io/">
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Person",
+ "name":"Keshav Porwal",
+ "url":"https://keshavporwal73-ux.github.io/",
+ "jobTitle":"Student Researcher, Author, Software Developer and AI Builder",
+ "sameAs":[
+  "https://github.com/keshavporwal73-ux/",
+  "https://keshavporwal.wordpress.com/",
+  "https://curiofeedblog.wordpress.com/"
+ ]
+}
+</script>
+
+<style>
+:root{
+ --bg:#070b14;
+ --bg2:#0b1120;
+ --card:#101827;
+ --text:#f4f8ff;
+ --muted:#9eacc4;
+ --line:#ffffff17;
+ --blue:#00d4ff;
+ --blue2:#63e7ff;
+ --green:#55e6a5;
+ --max:1160px
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+ margin:0;
+ background:
+ radial-gradient(circle at 80% 0%,#07304a55,transparent 32rem),
+ radial-gradient(circle at 10% 20%,#102b5050,transparent 30rem),
+ var(--bg);
+ color:var(--text);
+ font-family:Inter,Arial,Helvetica,sans-serif;
+ line-height:1.65
+}
+
+a{
+ color:var(--blue2);
+ text-decoration:none
+}
+
+a:hover{text-decoration:underline}
+
+.container{
+ width:min(calc(100% - 40px),var(--max));
+ margin:auto
+}
+
+header{
+ border-bottom:1px solid var(--line);
+ background:#070b14dd;
+ position:sticky;
+ top:0;
+ z-index:20;
+ backdrop-filter:blur(14px)
+}
+
+.nav{
+ min-height:68px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:20px
+}
+
+.logo{
+ font-weight:900;
+ letter-spacing:.12em;
+ font-size:15px
+}
+
+.navlinks{
+ display:flex;
+ gap:22px;
+ flex-wrap:wrap;
+ font-size:13px
+}
+
+.navlinks a{color:var(--muted)}
+.navlinks a:hover{color:var(--text)}
+
+.hero{
+ padding:110px 0 90px;
+ border-bottom:1px solid var(--line)
+}
+
+.kicker{
+ color:var(--blue);
+ font-size:12px;
+ font-weight:800;
+ letter-spacing:.2em;
+ text-transform:uppercase
+}
+
+h1{
+ margin:14px 0 10px;
+ font-size:clamp(48px,9vw,94px);
+ line-height:.95;
+ letter-spacing:-.055em
+}
+
+.hero h2{
+ margin:0 0 24px;
+ color:var(--blue2);
+ font-size:clamp(16px,2.5vw,25px);
+ font-weight:700
+}
+
+.hero p{
+ max-width:820px;
+ color:var(--muted);
+ font-size:18px
+}
+
+.buttons{
+ display:flex;
+ flex-wrap:wrap;
+ gap:12px;
+ margin-top:30px
+}
+
+.btn{
+ display:inline-block;
+ padding:11px 17px;
+ border:1px solid var(--line);
+ border-radius:8px;
+ color:var(--text);
+ background:#ffffff08;
+ font-weight:700;
+ font-size:14px
+}
+
+.btn.primary{
+ background:var(--blue);
+ color:#001018;
+ border-color:var(--blue)
+}
+
+section{padding:85px 0}
+
+.section-label{
+ color:var(--blue);
+ font-size:12px;
+ font-weight:800;
+ letter-spacing:.18em;
+ text-transform:uppercase;
+ margin-bottom:8px
+}
+
+h2{
+ font-size:clamp(30px,5vw,48px);
+ line-height:1.05;
+ margin:0 0 14px;
+ letter-spacing:-.035em
+}
+
+.lead{
+ color:var(--muted);
+ max-width:820px
+}
+
+.card{
+ background:linear-gradient(145deg,#111b2c,#0c1422);
+ border:1px solid var(--line);
+ border-radius:14px;
+ padding:28px;
+ margin-top:28px
+}
+
+.card h3{
+ margin:0 0 8px;
+ font-size:23px
+}
+
+.muted{color:var(--muted)}
+
+.tag{
+ display:inline-block;
+ margin:4px 5px 4px 0;
+ padding:4px 9px;
+ border:1px solid var(--line);
+ border-radius:999px;
+ color:var(--muted);
+ font-size:11px
+}
+
+.metrics{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:12px;
+ margin-top:24px
+}
+
+.metric{
+ border:1px solid var(--line);
+ border-radius:10px;
+ padding:18px;
+ background:#ffffff05
+}
+
+.metric strong{
+ display:block;
+ font-size:27px;
+ color:var(--blue2)
+}
+
+.metric span{
+ color:var(--muted);
+ font-size:12px
+}
+
+.arch{
+ margin:28px 0;
+ padding:18px;
+ overflow:hidden;
+ border:1px solid var(--line);
+ border-radius:12px;
+ background:#050911
+}
+
+table{
+ width:100%;
+ border-collapse:collapse;
+ margin-top:20px;
+ font-size:14px
+}
+
+th,td{
+ padding:12px;
+ border-bottom:1px solid var(--line);
+ text-align:left
+}
+
+th{color:var(--blue2)}
+td{color:var(--muted)}
+
+.note{
+ border-left:3px solid var(--green);
+ padding:12px 16px;
+ background:#55e6a508;
+ color:var(--muted);
+ margin-top:22px
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:18px
+}
+
+.project{
+ height:100%;
+ display:flex;
+ flex-direction:column
+}
+
+.project p{
+ color:var(--muted);
+ flex:1
+}
+
+.project .buttons{margin-top:20px}
+
+footer{
+ padding:45px 0;
+ border-top:1px solid var(--line);
+ color:var(--muted);
+ font-size:13px
+}
+
+.footerlinks{
+ display:flex;
+ gap:18px;
+ flex-wrap:wrap;
+ margin-bottom:18px
+}
+
+@media(max-width:800px){
+ .metrics{grid-template-columns:repeat(2,1fr)}
+ .grid{grid-template-columns:1fr}
+ .navlinks{display:none}
+}
+
+@media(max-width:500px){
+ .container{width:min(calc(100% - 28px),var(--max))}
+ .hero{padding:75px 0 65px}
+ section{padding:65px 0}
+ .metrics{grid-template-columns:1fr}
+ .card{padding:20px}
+ table{font-size:12px}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+<header>
+<div class="container nav">
+<div class="logo">KP</div>
+<nav class="navlinks">
+<a href="#research">Research</a>
+<a href="#projects">Projects</a>
+<a href="#writing">Writing</a>
+<a href="#about">About</a>
+</nav>
+</div>
+</header>
 
-  <nav>
-    <div class="container nav-inner">
+<main>
 
-      <a class="brand" href="#top">
-        KESHAV <span>PORWAL</span>
-      </a>
+<section class="hero">
+<div class="container">
 
-      <div class="nav-links">
-        <a href="#adaptive">ADAPTIVE</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#writing">Writing</a>
-      </div>
+<div class="kicker">Student Researcher · AI Builder · Author</div>
 
-    </div>
-  </nav>
+<h1>Keshav<br>Porwal</h1>
 
+<h2>Student Researcher • Author • Software Developer • AI Builder • Science Communicator • Student Leader</h2>
 
-  <!-- HERO -->
+<p>
+Class 10 student from India working independently across scientific research,
+artificial intelligence, software engineering, astronomy, history, writing,
+publishing and science communication.
+</p>
 
-  <main id="top">
+<p>
+Creator of <strong>17 original ebooks</strong>, independent research projects,
+and multiple AI/software systems built to investigate problems, organize
+knowledge and turn ideas into working products.
+</p>
 
-    <section class="hero">
+<div class="buttons">
+<a class="btn primary" href="#research">Explore Research →</a>
+<a class="btn" href="https://github.com/keshavporwal73-ux/" target="_blank">GitHub →</a>
+<a class="btn" href="https://keshavporwal.wordpress.com/" target="_blank">Author Platform →</a>
+</div>
 
-      <div class="container">
+</div>
+</section>
 
-        <div class="hero-content">
+<section id="adaptive">
+<div class="container">
 
-          <div class="eyebrow">
-            STUDENT RESEARCHER • AI BUILDER • AUTHOR
-          </div>
+<div class="section-label">Primary Research Project</div>
 
-          <h1>
-            Keshav<br>
-            Porwal
-          </h1>
+<h2>ADAPTIVE</h2>
 
-          <div class="role">
-            Student Researcher • Author • Software Developer • AI Builder • Science Communicator • Student Leader
-          </div>
+<p class="lead">
+<strong>ADAPTIVE — A Specialized Parallel Architecture for Resource-Constrained Pattern Recognition</strong>
+</p>
 
-          <p class="hero-description">
-            Class 10 student researcher from India working independently across
-            scientific research, artificial intelligence, software engineering,
-            astronomy, history, writing, publishing and science communication.
-          </p>
+<div class="card">
 
-          <p class="hero-identity">
-            Creator of <strong>17 original ebooks</strong>, independent research
-            projects and multiple AI/software systems.
-          </p>
-<!-- METRICS -->
+<p>
+ADAPTIVE investigates parallel pattern evaluation as an alternative to
+sequential evaluation for resource-constrained pattern-recognition workloads.
+The architecture evaluates multiple Hamming distances in parallel and then
+uses a logarithmic reduction structure to identify the best match.
+</p>
+
+<div class="arch">
+
+<svg viewBox="0 0 900 250" width="100%" role="img"
+aria-label="ADAPTIVE parallel pattern recognition architecture">
+
+<rect x="25" y="85" width="130" height="70" rx="10"
+fill="#101827" stroke="#00d4ff"/>
+<text x="90" y="125" fill="#f4f8ff"
+text-anchor="middle" font-size="17">16-bit INPUT</text>
+
+<line x1="155" y1="120" x2="210" y2="120"
+stroke="#63e7ff" stroke-width="3"/>
+
+<rect x="210" y="55" width="150" height="130" rx="10"
+fill="#101827" stroke="#00d4ff"/>
+<text x="285" y="92" fill="#f4f8ff"
+text-anchor="middle" font-size="17">8× HAMMING</text>
+<text x="285" y="117" fill="#9eacc4"
+text-anchor="middle" font-size="14">parallel units</text>
+<text x="285" y="145" fill="#9eacc4"
+text-anchor="middle" font-size="14">distance</text>
+
+<line x1="360" y1="120" x2="420" y2="120"
+stroke="#63e7ff" stroke-width="3"/>
+
+<text x="445" y="75" fill="#9eacc4"
+text-anchor="middle" font-size="13">8 → 4</text>
+<text x="505" y="105" fill="#9eacc4"
+text-anchor="middle" font-size="13">4 → 2</text>
+<text x="565" y="135" fill="#9eacc4"
+text-anchor="middle" font-size="13">2 → 1</text>
+
+<line x1="420" y1="120" x2="600" y2="120"
+stroke="#63e7ff" stroke-width="3"/>
+
+<rect x="600" y="85" width="105" height="70" rx="10"
+fill="#101827" stroke="#55e6a5"/>
+<text x="652" y="126" fill="#f4f8ff"
+text-anchor="middle" font-size="17">MIN</text>
+
+<line x1="705" y1="120" x2="755" y2="120"
+stroke="#63e7ff" stroke-width="3"/>
+
+<rect x="755" y="85" width="120" height="70" rx="10"
+fill="#101827" stroke="#55e6a5"/>
+<text x="815" y="116" fill="#f4f8ff"
+text-anchor="middle" font-size="15">BEST</text>
+<text x="815" y="138" fill="#f4f8ff"
+text-anchor="middle" font-size="15">MATCH</text>
+
+</svg>
+
+</div>
 
 <div class="metrics">
+<div class="metric">
+<strong>4</strong>
+<span>architectural cycles</span>
+</div>
+<div class="metric">
+<strong>40 ns</strong>
+<span>@ 100 MHz</span>
+</div>
+<div class="metric">
+<strong>50%</strong>
+<span>latency reduction</span>
+</div>
+<div class="metric">
+<strong>2×</strong>
+<span>relative improvement</span>
+</div>
+</div><div class="card">
 
-  <div class="metric">
-    <div class="metric-number">4</div>
-    <div class="metric-label">
-      Architectural latency — ADAPTIVE cycles
-    </div>
-  </div>
+<h3>Verification & Comparison</h3>
 
-  <div class="metric">
-    <div class="metric-number">40 ns</div>
-    <div class="metric-label">
-      Simulated latency @ 100 MHz
-    </div>
-  </div>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Baseline</th>
+<th>ADAPTIVE</th>
+</tr>
+</thead>
 
-  <div class="metric">
-    <div class="metric-number">50%</div>
-    <div class="metric-label">
-      Latency reduction
-    </div>
-  </div>
+<tbody>
+<tr>
+<td>Verification</td>
+<td>56 / 56</td>
+<td>100 / 100</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>8 cycles</td>
+<td>4 cycles</td>
+</tr>
+<tr>
+<td>Clock</td>
+<td>100 MHz</td>
+<td>100 MHz</td>
+</tr>
+<tr>
+<td>Simulated latency</td>
+<td>80 ns</td>
+<td>40 ns</td>
+</tr>
+<tr>
+<td>Latency reduction</td>
+<td>—</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Relative improvement</td>
+<td>1×</td>
+<td>2×</td>
+</tr>
+</tbody>
+</table>
 
-  <div class="metric">
-    <div class="metric-number">2×</div>
-    <div class="metric-label">
-      Relative improvement
-    </div>
-  </div>
-
+<div class="note">
+<strong>Evidence boundary:</strong>
+Current results represent behavioral/SystemVerilog RTL simulation and
+architectural verification. FPGA utilization, physical area, power
+consumption, maximum hardware frequency, timing closure, and fabricated
+hardware performance have not yet been measured.
 </div>
 
-<!-- COMPARISON -->
+<p class="muted">
+<strong>RTL simulation verified</strong> — FPGA/ASIC implementation not yet fabricated.
+</p>
 
-<div class="comparison">
+<h3>Research Contribution</h3>
 
-  <table>
+<p class="muted">
+Investigates parallel pattern evaluation followed by logarithmic reduction
+as an alternative to sequential evaluation for resource-constrained workloads.
+</p>
 
-    <thead>
-      <tr>
-        <th>Metric</th>
-        <th>Baseline</th>
-        <th>ADAPTIVE</th>
-      </tr>
-    </thead>
+<p>
+<span class="tag">✓ Verified RTL proof-of-concept</span>
+<span class="tag">Research paper completed</span>
+<span class="tag">14-page manuscript</span>
+</p>
 
-    <tbody>
-
-      <tr>
-        <td>Verification</td>
-        <td>56 / 56 PASS</td>
-        <td>100 / 100 PASS</td>
-      </tr>
-
-      <tr>
-        <td>Architectural latency</td>
-        <td>8 cycles</td>
-        <td>4 cycles</td>
-      </tr>
-
-      <tr>
-        <td>Clock</td>
-        <td>100 MHz</td>
-        <td>100 MHz</td>
-      </tr>
-
-      <tr>
-        <td>Simulated latency</td>
-        <td>80 ns</td>
-        <td>40 ns</td>
-      </tr>
-
-      <tr>
-        <td>Latency reduction</td>
-        <td>—</td>
-        <td>50%</td>
-      </tr>
-
-      <tr>
-        <td>Relative improvement</td>
-        <td>1×</td>
-        <td>2×</td>
-      </tr>
-
-    </tbody>
-
-  </table>
-
-</div>
-
-<!-- EVIDENCE -->
-
-<div class="evidence">
-
-  <strong>Evidence boundary:</strong>
-
-  Current results represent behavioral/SystemVerilog RTL simulation
-  and architectural verification. FPGA utilization, physical area,
-  power consumption, maximum hardware frequency, timing closure,
-  and fabricated hardware performance have not yet been measured.
-
-  <br><br>
-
-  <strong>
-    RTL simulation verified — FPGA/ASIC implementation not yet fabricated.
-  </strong>
-
-</div>
-
-<!-- CONTRIBUTION -->
-
-<div class="research-contribution">
-
-  <strong>RESEARCH CONTRIBUTION</strong>
-
-  Investigates parallel pattern evaluation followed by logarithmic
-  reduction as an alternative to sequential evaluation for
-  resource-constrained workloads.
-
-</div>
-
-<div class="status">
-  ✓ Verified RTL proof-of-concept • Research paper completed (14 pages)
+<div class="buttons">
+<a class="btn primary"
+href="https://drive.google.com/file/d/1l2DYPlxVLumVUcAVPidb13GxjabiyYdz/view?usp=drivesdk"
+target="_blank">
+View ADAPTIVE Research Paper →
+</a>
 </div>
 
 </div>
-
 </div>
-
-    </section>
-          <div class="buttons">
-
-            <a
-              class="button primary"
-              href="https://github.com/keshavporwal73-ux/"
-              target="_blank"
-              rel="noopener"
-            >
-              GitHub →
-            </a>
-
-            <a
-              class="button"
-              href="https://keshavporwal.wordpress.com/"
-              target="_blank"
-              rel="noopener"
-            >
-              Author Platform →
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ADAPTIVE -->
-
-    <section id="adaptive">
-
-      <div class="container">
-
-        <div class="section-label">
-          PRIMARY RESEARCH PROJECT
-        </div>
-
-        <h2 class="section-title">
-          ADAPTIVE
-        </h2>
-
-        <div class="adaptive-card">
-
-          <h3 class="adaptive-heading">
-            ADAPTIVE — A Specialized Parallel Architecture for Resource-Constrained Pattern Recognition
-          </h3>
-
-          <p class="adaptive-description">
-            ADAPTIVE is a specialized digital architecture designed and
-            experimentally verified to investigate whether parallel pattern
-            evaluation can reduce computational latency compared with
-            sequential pattern evaluation under controlled resource
-            constraints.
-          </p>
-
-
-          <!-- ARCHITECTURE -->
-
-          <div class="architecture">
-
-            <svg
-              viewBox="0 0 1000 300"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="ADAPTIVE parallel architecture diagram"
-            >
-
-              <!-- INPUT -->
-
-              <rect
-                x="25"
-                y="110"
-                width="150"
-                height="80"
-                rx="12"
-                fill="#101a30"
-                stroke="#63e7ff"
-                stroke-width="2"
-              />
-
-              <text
-                x="100"
-                y="143"
-                fill="#f4f8ff"
-                text-anchor="middle"
-                font-size="17"
-                font-weight="700"
-              >
-                16-bit INPUT
-              </text>
-
-              <text
-                x="100"
-                y="168"
-                fill="#9eacc4"
-                text-anchor="middle"
-                font-size="12"
-              >
-                Pattern
-              </text>
-
-
-              <!-- CONNECTION -->
-
-              <line
-                x1="175"
-                y1="150"
-                x2="235"
-                y2="150"
-                stroke="#00d4ff"
-                stroke-width="2"
-              />
-
-
-              <!-- HAMMING BLOCK -->
-
-              <rect
-                x="235"
-                y="70"
-                width="180"
-                height="160"
-                rx="14"
-                fill="#101a30"
-                stroke="#00d4ff"
-                stroke-width="2"
-              />
-
-              <text
-                x="325"
-                y="100"
-                fill="#63e7ff"
-                text-anchor="middle"
-                font-size="14"
-                font-weight="800"
-              >
-                PARALLEL EVALUATION
-              </text>
-
-              <text
-                x="325"
-                y="125"
-                fill="#9eacc4"
-                text-anchor="middle"
-                font-size="12"
-              >
-                8 Hamming Units
-              </text>
-
-              <rect
-                x="260"
-                y="145"
-                width="55"
-                height="28"
-                rx="6"
-                fill="#0c1426"
-                stroke="#55e6a5"
-              />
-
-              <rect
-                x="325"
-                y="145"
-                width="55"
-                height="28"
-                rx="6"
-                fill="#0c1426"
-                stroke="#55e6a5"
-              />
-
-              <rect
-                x="260"
-                y="182"
-                width="55"
-                height="28"
-                rx="6"
-                fill="#0c1426"
-                stroke="#55e6a5"
-              />
-
-              <rect
-                x="325"
-                y="182"
-                width="55"
-                height="28"
-                rx="6"
-                fill="#0c1426"
-                stroke="#55e6a5"
-              />
-
-              <text
-                x="287"
-                y="164"
-                fill="#f4f8ff"
-                text-anchor="middle"
-                font-size="11"
-              >
-                H1–H2
-              </text>
-
-              <text
-                x="352"
-                y="164"
-                fill="#f4f8ff"
-                text-anchor="middle"
-                font-size="11"
-              >
-                H3–H4
-              </text>
-
-              <text
-                x="287"
-                y="201"
-                fill="#f4f8ff"
-                text-anchor="middle"
-                font-size="11"
-              >
-                H5–H6
-              </text>
-
-              <text
-                x="352"
-                y="201"
-                fill="#f4f8ff"
-                text-anchor="middle"
-                font-size="11"
-              >
-                H7–H8
-              </text>
-
-
-              <!-- CONNECTION -->
-
-              <line
-                x1="415"
-                y1="150"
-                x2="475"
-             x2="475"
-y2="150"
-stroke="#00d4ff"
-stroke-width="2"
-/>
-
-<!-- REDUCTION -->
-
-<rect
-  x="475"
-  y="85"
-  width="150"
-  height="130"
-  rx="14"
-  fill="#101a30"
-  stroke="#63e7ff"
-  stroke-width="2"
-/>
-
-<text
-  x="550"
-  y="115"
-  fill="#63e7ff"
-  text-anchor="middle"
-  font-size="14"
-  font-weight="800"
->
-  REDUCTION
-</text>
-
-<text
-  x="550"
-  y="143"
-  fill="#f4f8ff"
-  text-anchor="middle"
-  font-size="13"
->
-  8 → 4
-</text>
-
-<text
-  x="550"
-  y="166"
-  fill="#f4f8ff"
-  text-anchor="middle"
-  font-size="13"
->
-  4 → 2
-</text>
-
-<text
-  x="550"
-  y="189"
-  fill="#f4f8ff"
-  text-anchor="middle"
-  font-size="13"
->
-  2 → 1
-</text>
-
-<!-- CONNECTION -->
-
-<line
-  x1="625"
-  y1="150"
-  x2="685"
-  y2="150"
-  stroke="#00d4ff"
-  stroke-width="2"
-/>
-
-<!-- MIN -->
-
-<rect
-  x="685"
-  y="110"
-  width="120"
-  height="80"
-  rx="12"
-  fill="#101a30"
-  stroke="#55e6a5"
-  stroke-width="2"
-/>
-
-<text
-  x="745"
-  y="143"
-  fill="#55e6a5"
-  text-anchor="middle"
-  font-size="16"
-  font-weight="800"
->
-  MIN
-</text>
-
-<text
-  x="745"
-  y="166"
-  fill="#9eacc4"
-  text-anchor="middle"
-  font-size="11"
->
-  Best Match
-</text>
-
-<!-- OUTPUT -->
-
-<line
-  x1="805"
-  y1="150"
-  x2="865"
-  y2="150"
-  stroke="#00d4ff"
-  stroke-width="2"
-/>
-
-<circle
-  cx="900"
-  cy="150"
-  r="34"
-  fill="#101a30"
-  stroke="#63e7ff"
-  stroke-width="2"
-/>
-
-<text
-  x="900"
-  y="146"
-  fill="#f4f8ff"
-  text-anchor="middle"
-  font-size="11"
-  font-weight="700"
->
-  BEST
-</text>
-
-<text
-  x="900"
-  y="162"
-  fill="#63e7ff"
-  text-anchor="middle"
-  font-size="10"
->
-  MATCH
-</text>
-
-</svg><!-- RESEARCH -->
-
-<section id="research">
-
-  <div class="container">
-
-    <div class="section-label">
-      INDEPENDENT RESEARCH
-    </div>
-
-    <h2 class="section-title">
-      Research
-    </h2>
-
-    <p class="section-intro">
-      Independent investigations spanning solar physics, theoretical
-      astrophysics and galactic dynamics.
-    </p>
-          </div><!-- RESEARCH -->
-
-<section id="research">
-
-  <div class="container">
-
-    <div class="section-label">
-      INDEPENDENT RESEARCH
-    </div>
-
-    <h2 class="section-title">
-      Research
-    </h2>
-
-    <p class="section-intro">
-      Independent investigations spanning solar physics,
-      theoretical astrophysics and galactic dynamics.
-    </p>
-
-    <div class="research-grid">
-
-      <article class="research-item">
-
-        <div class="research-number">
-          PROJECT UNKNOWN #001
-        </div>
-
-        <h3>Solar Physics</h3>
-
-        <p>
-          Independent analysis of solar active-region imagery
-          and cross-correlation behaviour using SDO/AIA
-          observational data.
-        </p>
-
-      </article>
-
-
-      <article class="research-item">
-
-        <div class="research-number">
-          PROJECT UNKNOWN #002
-        </div>
-
-        <h3>Planet Nine &amp; MOND</h3>
-
-        <p>
-          Theoretical investigation connecting the Planet Nine
-          hypothesis with modified-gravity considerations.
-        </p>
-
-      </article>
-
-
-      <article class="research-item">
-
-        <div class="research-number">
-          PROJECT UNKNOWN #003
-        </div>
-
-        <h3>Quasi-Star Critical Radius</h3>
-
-        <p>
-          Computational investigation of critical-radius
-          behaviour in quasi-star models with analytical
-          comparison.
-        </p>
-
-      </article>
-
-
-      <article class="research-item">
-
-        <div class="research-number">
-          PROJECT UNKNOWN #004
-        </div>
-
-        <h3>Galactic Dynamics</h3>
-
-        <p>
-          Independent analysis of galaxy rotation and
-          dark-matter halo boundary behaviour using
-          observational datasets.
-        </p>
-
-      </article>
-
-    </div>
-
-  </div>
-
 </section>
 
 
-<!-- PROJECTS -->
+<section id="research">
+<div class="container">
 
-<section id="projects">
+<div class="section-label">Independent Research</div>
 
-  <div class="container">
+<h2>Research</h2>
 
-    <div class="section-label">
-      SOFTWARE &amp; AI SYSTEMS
-    </div>
+<p class="lead">
+Five independent investigations spanning solar physics, theoretical
+astrophysics, computational physics, galactic dynamics and computer
+architecture.
+</p>
 
-    <h2 class="section-title">
-      Projects
-    </h2>
+<div class="grid">
 
-    <p class="section-intro">
-      Independent software systems built around artificial
-      intelligence, research workflows, astronomy, historical
-      intelligence and domain-specific business systems.
-    </p>
+<article class="card project">
+<div>
+<span class="tag">#001 · Solar Physics</span>
 
-    <div class="projects">
+<h3>
+Preliminary mUlti-wavelength investigation of temPoral variations
+in noaa active region 13386 Using sDo/aia eUv observations
+</h3>
 
+<p>
+A preliminary multi-wavelength investigation of temporal variations
+in NOAA Active Region 13386 using SDO/AIA EUV observations at
+94 Å, 171 Å and 304 Å, with computational signal analysis and
+cross-correlation methods.
+</p>
+</div>
 
-      <!-- AETHEL -->
-
-      <article class="project">
-
-        <div class="project-number">
-          01 / INTELLIGENCE
-        </div>
-
-        <h3>AETHEL Cognitive Labs</h3>
-
-        <p>
-          Multi-model intelligence architecture designed to
-          orchestrate multiple AI perspectives through a
-          structured seven-stage cognitive matrix:
-          Question → Investigate → Cross-Examine → Map →
-          Stress-Test → Synthesize → Decide.
-        </p>
-
-        <span class="project-link">
-          Cognitive Intelligence System
-        </span>
-
-      </article>
+<div class="buttons">
+<a class="btn primary"
+href="https://drive.google.com/file/d/1W__yJXW56gtSqti2zLET4ETPu5c34sRY/view?usp=drivesdk"
+target="_blank">
+View Research Paper →
+</a>
+</div>
+</article>
 
 
-      <!-- ORIGIN -->
+<article class="card project">
+<div>
+<span class="tag">#002 · Theoretical Astrophysics</span>
 
-      <article class="project">
+<h3>
+A Computational Investigation of a Hypothetical Distant Planet,
+Outer-Solar-System Dynamics, and Modified Gravity
+</h3>
 
-        <div class="project-number">
-          02 / CREATION OS
-        </div>
+<p>
+A computational investigation examining a hypothetical distant planet,
+outer-Solar-System dynamics and modified-gravity scenarios through
+mathematical modelling, numerical analysis and theoretical comparison.
+</p>
+</div>
 
-        <h3>ORIGIN</h3>
-
-        <p>
-          AI idea-to-impact platform connecting discovery,
-          research, planning, building, testing, publishing
-          and showcasing.
-        </p>
-
-        <a
-          class="project-link"
-          href="https://origin-bcqi.vercel.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          Open ORIGIN →
-        </a>
-
-      </article>
+<div class="buttons">
+<a class="btn primary"
+href="https://drive.google.com/file/d/1nJJOuOJ0D9saV_gGTvZXkjdbE3qKu_KF/view?usp=drivesdk"
+target="_blank">
+View Research Paper →
+</a>
+</div>
+</article>
 
 
-      <!-- ASTRO -->
+<article class="card project">
+<div>
+<span class="tag">#003 · Computational Astrophysics</span>
 
-      <article class="project">
+<h3>
+A Theoretical Investigation of the Critical Radius and Accretion
+Dynamics in Quasi-Star Envelope Models
+</h3>
 
-        <div class="project-number">
-          03 / ASTRONOMY
-        </div>
+<p>
+A theoretical and computational investigation of critical-radius
+behaviour and accretion dynamics in simplified quasi-star envelope
+models, including analytical and numerical validation across a
+441-model parameter grid.
+</p>
+</div>
 
-        <h3>ASTRO</h3>
-
-        <p>
-          AI-native astronomy laboratory with spatial 3D
-          exploration, astronomical visualisation and an
-          XR/VR-ready architecture.
-        </p>
-
-        <a
-          class="project-link"
-          href="https://astro-spatial-x.vercel.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          Open ASTRO →
-        </a>
-
-      </article>
-
-
-      <!-- CHRONOS -->
-
-      <article class="project">
-
-        <div class="project-number">
-          04 / HISTORY
-        </div>
-
-        <h3>CHRONOS</h3>
-
-        <p>
-          Historical intelligence system designed to explore
-          events, chronology, evidence and historical context
-          through AI-assisted research.
-        </p>
-
-        <a
-          class="project-link"
-          href="https://chronos-historical-intelligence-i33.vercel.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          Open CHRONOS →
-        </a>
-
-      </article>
+<div class="buttons">
+<a class="btn primary"
+href="https://drive.google.com/file/d/16H2-sqYxy3-pInWLi9LdcPCIhKwfais4/view?usp=drivesdk"
+target="_blank">
+View Research Paper →
+</a>
+</div>
+</article>
 
 
-      <!-- TEXTILE OS -->
+<article class="card project">
+<div>
+<span class="tag">#004 · Galactic Dynamics</span>
 
-      <article class="project">
+<h3>
+A Statistical Investigation of NFW Boundary Behaviour in the
+SPARC Galaxy Sample
+</h3>
 
-        <div class="project-number">
-          05 / BUSINESS AI
-        </div>
+<p>
+A statistical investigation of NFW boundary behaviour using the
+SPARC galaxy sample, examining scale-radius constraints and the
+relationship between observed galaxy dynamics and halo modelling.
+</p>
+</div>
 
-        <h3>TEXTILE OS AI</h3>
-
-        <p>
-          Domain-specific AI operating system for textile and
-          retail businesses with intelligent dashboards,
-          forecasting, inventory intelligence and business
-          actions.
-        </p>
-
-        <a
-          class="project-link"
-          href="https://retail-textile-management.vercel.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          Open TEXTILE OS AI →
-        </a>
-
-      </article>
+<div class="buttons">
+<a class="btn primary"
+href="https://drive.google.com/file/d/1V94_4rIepZh535Xgz5Vv8ayHZKcAGZ_B/view?usp=drivesdk"
+target="_blank">
+View Research Paper →
+</a>
+</div>
+</article>
 
 
-      <!-- RETAIL SYSTEM -->
+<article class="card project">
+<div>
+<span class="tag">#005 · Computer Architecture</span>
 
-      <article class="project">
+<h3>
+ADAPTIVE: A Specialized Parallel Architecture for
+Resource-Constrained Pattern Recognition
+</h3>
 
-        <div class="project-number">
-          06 / RETAIL SOFTWARE
-        </div>
+<p>
+A specialized parallel architecture investigating multi-pattern
+evaluation through parallel Hamming-distance computation and
+logarithmic reduction for resource-constrained workloads.
+</p>
+</div>
 
-        <h3>Retail Textile Management System</h3>
+<div class="buttons">
+<a class="btn primary"
+href="https://drive.google.com/file/d/1l2DYPlxVLumVUcAVPidb13GxjabiyYdz/view?usp=drivesdk"
+target="_blank">
+View Research Paper →
+</a>
+</div>
+</article>
 
-        <p>
-          Retail management platform covering POS,
-          inventory, barcode workflows and GST-oriented
-          business operations.
-        </p>
+</div>
 
-        <div class="buttons">
+<div class="buttons">
+<a class="btn"
+href="https://keshavporwal.wordpress.com/researches/"
+target="_blank">
+View Full Research Portfolio →
+</a>
+</div>
 
-          <a
-            class="project-link"
-            href="https://retail-textile-management.vercel.app/"
-            target="_blank"
-            rel="noopener"
-          >
-            Live App →
-          </a>
+</div>
+  </section><section id="projects">
+<div class="container">
 
-          <a
-            class="project-link"
-            href="https://github.com/keshavporwal73-ux/retail-textile-management"
-            target="_blank"
-            rel="noopener"
-          >
-            GitHub →
-          </a>
+<div class="section-label">Software & AI Systems</div>
 
-        </div>
+<h2>Projects</h2>
 
-      </article>
+<p class="lead">
+Independent software systems spanning multi-model intelligence, idea
+development, astronomy, historical intelligence and domain-specific AI.
+</p>
 
-    </div>
+<div class="grid">
 
-  </div>
+<article class="card project">
+<div>
+<span class="tag">AI · Multi-Model Intelligence</span>
+<h3>AETHEL Cognitive Labs</h3>
 
-  <!-- WRITING -->
+<p>
+A multi-model intelligence system designed to move beyond single-model
+blind spots through a structured seven-stage cognitive matrix:
+Question → Investigate → Cross-Examine → Map → Stress-Test →
+Synthesize → Decide.
+</p>
+</div>
+
+<div class="buttons">
+<a class="btn" href="https://github.com/keshavporwal73-ux/" target="_blank">
+GitHub →
+</a>
+</div>
+</article>
+
+
+<article class="card project">
+<div>
+<span class="tag">AI · Idea-to-Impact</span>
+<h3>ORIGIN</h3>
+
+<p>
+An AI-native platform designed to transform ideas into structured,
+research-backed projects through the workflow:
+IDEA → DISCOVER → RESEARCH → PLAN → BUILD → TEST → PUBLISH → SHOWCASE.
+</p>
+</div>
+
+<div class="buttons">
+<a class="btn primary"
+href="https://origin-bcqi.vercel.app/"
+target="_blank">
+Open Live App →
+</a>
+</div>
+</article>
+
+
+<article class="card project">
+<div>
+<span class="tag">Astronomy · 3D · XR</span>
+<h3>ASTRO</h3>
+
+<p>
+An AI-native astronomy laboratory combining spatial astronomy,
+Three.js/WebGL visualization, planetary exploration, astronomical
+data and an XR/VR-ready experience.
+</p>
+</div>
+
+<div class="buttons">
+<a class="btn primary"
+href="https://astro-spatial-x.vercel.app/"
+target="_blank">
+Open Live App →
+</a>
+</div>
+</article>
+
+
+<article class="card project">
+<div>
+<span class="tag">History · AI</span>
+<h3>CHRONOS</h3>
+
+<p>
+A historical intelligence platform designed to help users explore
+historical information through structured context, timelines and
+AI-assisted investigation.
+</p>
+</div>
+
+<div class="buttons">
+<a class="btn primary"
+href="https://chronos-historical-intelligence-i33.vercel.app/"
+target="_blank">
+Open Live App →
+</a>
+</div>
+</article>
+
+
+<article class="card project">
+<div>
+<span class="tag">Retail · AI · Business Intelligence</span>
+<h3>TEXTILE OS AI</h3>
+
+<p>
+A domain-specific AI system for textile and retail businesses,
+combining operational intelligence with dashboards, forecasting,
+reorder analysis, dead-stock detection and AI-assisted decisions.
+</p>
+</div>
+
+<div class="buttons">
+<a class="btn primary"
+href="https://retail-textile-management.vercel.app/"
+target="_blank">
+Open Live App →
+</a>
+</div>
+</article>
+
+
+<article class="card project">
+<div>
+<span class="tag">Retail Technology · POS</span>
+<h3>Retail Textile Management System</h3>
+
+<p>
+A retail management system for textile businesses with point-of-sale,
+inventory management, barcode workflows and GST-oriented operations.
+This project formed the foundation for the later TEXTILE OS AI system.
+</p>
+</div>
+
+<div class="buttons">
+<a class="btn primary"
+href="https://retail-textile-management.vercel.app/"
+target="_blank">
+Open Live App →
+</a>
+
+<a class="btn"
+href="https://github.com/keshavporwal73-ux/retail-textile-management"
+target="_blank">
+GitHub →
+</a>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
 
 <section id="writing">
+<div class="container">
 
-  <div class="container">
+<div class="section-label">Writing & Publishing</div>
 
-    <div class="section-label">
-      WRITING &amp; PUBLISHING
-    </div>
+<h2>Author & Science Communicator</h2>
 
-    <h2 class="section-title">
-      Author
-    </h2>
+<div class="grid">
 
-    <div class="writing-box">
+<article class="card project">
+<div>
+<span class="tag">17 Original Ebooks</span>
+<h3>Independent Writing</h3>
 
-      <div>
+<p>
+Author of 17 original ebooks spanning science, history, geopolitics,
+psychology, philosophy, mythology, research and other subjects.
+</p>
+</div>
 
-        <h3>17 Original Ebooks</h3>
-
-        <p>
-          Independent writing spanning geopolitics, history,
-          psychology, philosophy, science, technology and
-          long-form research.
-        </p>
-
-        <br>
-
-        <a
-          class="button"
-          href="https://keshavporwal.wordpress.com/"
-          target="_blank"
-          rel="noopener"
-        >
-          Visit Author Platform →
-        </a>
-
-      </div>
-
-      <div class="book-count">
-        17
-      </div>
-
-    </div>
+<div class="buttons">
+<a class="btn primary"
+href="https://keshavporwal.wordpress.com/"
+target="_blank">
+Author Platform →
+</a>
+</div>
+</article>
 
 
-    <div style="height:16px"></div>
+<article class="card project">
+<div>
+<span class="tag">Curiosity · Science · Ideas</span>
+<h3>CurioFeed</h3>
 
+<p>
+A science, history and curiosity-focused publishing platform built
+to explore ideas and communicate knowledge beyond conventional
+school projects.
+</p>
+</div>
 
-    <div class="writing-box">
+<div class="buttons">
+<a class="btn primary"
+href="https://curiofeedblog.wordpress.com/"
+target="_blank">
+Visit CurioFeed →
+</a>
+</div>
+</article>
 
-      <div>
-
-        <h3>CurioFeed</h3>
-
-        <p>
-          A curiosity-driven publishing platform covering
-          ideas, science, history, psychology and knowledge.
-        </p>
-
-        <br>
-
-        <a
-          class="button"
-          href="https://curiofeedblog.wordpress.com/"
-          target="_blank"
-          rel="noopener"
-        >
-          Visit CurioFeed →
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
 
-<!-- FOOTER -->
+<section id="about">
+<div class="container">
+
+<div class="section-label">About</div>
+
+<h2>Building Across Disciplines</h2>
+
+<div class="card">
+
+<p class="lead">
+Keshav Porwal is a Class 10 student from India working independently
+across scientific research, software engineering, artificial intelligence,
+astronomy, history, writing and science communication.
+</p>
+
+<p class="muted">
+His work combines research questions with computational methods,
+independent writing and practical software development. The objective
+is not simply to collect projects, but to develop the ability to move
+from a question to evidence, from evidence to a method, and from a
+method to a working result.
+</p>
+
+<div class="buttons">
+<a class="btn primary"
+href="https://github.com/keshavporwal73-ux/"
+target="_blank">
+Explore GitHub →
+</a>
+
+<a class="btn"
+href="https://keshavporwal.wordpress.com/"
+target="_blank">
+Author Platform →
+</a>
+</div>
+
+</div>
+</div>
+</section></main>
 
 <footer>
+<div class="container">
 
-  <div class="container">
+<div class="footerlinks">
 
-    <div class="footer-inner">
+<a href="https://github.com/keshavporwal73-ux/"
+target="_blank">GitHub</a>
 
-      <div class="footer-name">
-        KESHAV PORWAL
-      </div>
+<a href="https://keshavporwal.wordpress.com/"
+target="_blank">Author Platform</a>
 
-      <div class="footer-links">
+<a href="https://curiofeedblog.wordpress.com/"
+target="_blank">CurioFeed</a>
 
-        <a
-          href="https://github.com/keshavporwal73-ux/"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub
-        </a>
+<a href="https://keshavporwal.wordpress.com/researches/"
+target="_blank">Research Hub</a>
 
-        <a
-          href="https://keshavporwal.wordpress.com/"
-          target="_blank"
-          rel="noopener"
-        >
-          Author
-        </a>
+<a href="sitemap.xml">Sitemap</a>
 
-        <a
-          href="https://curiofeedblog.wordpress.com/"
-          target="_blank"
-          rel="noopener"
-        >
-          CurioFeed
-        </a>
+<a href="robots.txt">Robots</a>
 
-        <a href="sitemap.xml">
-          Sitemap
-        </a>
+</div>
 
-        <a href="robots.txt">
-          Robots
-        </a>
+<p>
+<strong>Keshav Porwal</strong><br>
+Student Researcher • Author • Software Developer • AI Builder •
+Science Communicator • Student Leader
+</p>
 
-      </div>
+<p>
+© 2026 Keshav Porwal. Independent research, writing and software.
+</p>
 
-    </div>
-
-    <div class="copyright">
-      © 2026 Keshav Porwal. Independent research, writing and software.
-    </div>
-
-  </div>
-
+</div>
 </footer>
-
 
 </body>
 </html>
-</section>
-          
