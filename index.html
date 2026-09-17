@@ -38,7 +38,33 @@
 </script>
 
 <style>
+.hero-layout{
+ display:grid;
+ grid-template-columns:1.35fr .65fr;
+ gap:55px;
+ align-items:center;
+}
 
+.profile-photo{
+ width:100%;
+ max-width:330px;
+ aspect-ratio:1/1;
+ object-fit:cover;
+ border-radius:18px;
+ border:1px solid var(--line);
+ box-shadow:0 20px 60px #00000055;
+}
+
+@media(max-width:800px){
+ .hero-layout{
+  grid-template-columns:1fr;
+  gap:35px;
+ }
+
+ .profile-photo{
+  max-width:260px;
+ }
+}
 :root{
  --bg:#070b14;
  --bg2:#0b1120;
@@ -221,7 +247,81 @@ h2{
 .muted{
  color:var(--muted);
 }
+<!-- HERO -->
 
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-layout">
+
+<div>
+
+<div class="kicker">
+Student Researcher · AI Builder · Author
+</div>
+
+<h1>
+Keshav Porwal
+</h1>
+
+<h2>
+Student Researcher • Author • Software Developer • AI Builder • Science Communicator • Student Leader
+</h2>
+
+<p>
+Class 10 student from India working independently across scientific research,
+artificial intelligence, software engineering, astronomy, history, writing,
+publishing and science communication.
+</p>
+
+<p>
+Creator of 17 original ebooks, independent research projects, and multiple
+AI/software systems built to investigate problems, organize knowledge and
+turn ideas into working products.
+</p>
+
+<div class="buttons">
+
+<a href="#research" class="btn primary">
+Explore Research →
+</a>
+
+<a href="https://github.com/keshavporwal73-ux"
+class="btn"
+target="_blank"
+rel="noopener">
+GitHub →
+</a>
+
+<a href="https://keshavporwal.wordpress.com/"
+class="btn"
+target="_blank"
+rel="noopener">
+Author Platform →
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<img
+src="IMG_20260912_210311.jpg"
+alt="Keshav Porwal"
+class="profile-photo"
+loading="eager"
+>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 .tag{
  display:inline-block;
  margin:4px 5px 4px 0;
